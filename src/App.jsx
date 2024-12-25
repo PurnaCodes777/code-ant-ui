@@ -3,12 +3,17 @@ import Sidebar from "./components/Sidebar/Sidebar"
 import Header from "./components/Header/Header"
 import Main from "./components/Main/Main"
 import { IoSearch } from "react-icons/io5"
+import AddRepoForm from "./components/AddRepoForm/AddRepoForm"
+import { useContext } from "react"
+import { RepoContext } from "./AddRepoContext/AddRepoContext"
 
 
 
 
 const App = () => {
 
+
+  const { showRepo, setShowRepo } = useContext(RepoContext);
 
 
   return (
@@ -24,6 +29,8 @@ const App = () => {
         </div>
         <Main />
       </div>
+
+      {showRepo && <AddRepoForm />}
     </div>
   )
 }
