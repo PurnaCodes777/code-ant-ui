@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    min-height: 100vh;
+    max-height: 100vh;
+    font-family: "Inter", serif;
+    background-color: #FAFAFA;
+    overflow: hidden;
+    
+}
+
+
+.dot::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    right: -13px;
+    top: 7px;
+    background: #1570EF;
+}
+
+.repo-list::-webkit-scrollbar {
+    width: 2px;
+}
+
+.repo-list::-webkit-scrollbar-thumb {
+    background: #1570EF;
+    border-radius: 10px;
+}
+
+
+
+@media all and (min-width :428px) and (max-width: 768px) {
+    body {
+        overflow-y: scroll;
+    }
+}
