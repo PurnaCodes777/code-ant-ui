@@ -19,7 +19,7 @@ body {
     font-family: "Inter", serif;
     background-color: #FAFAFA;
     overflow: hidden;
-    
+
 }
 
 
@@ -41,6 +41,13 @@ body {
 .repo-list::-webkit-scrollbar-thumb {
     background: #1570EF;
     border-radius: 10px;
+}
+
+.uc-bg {
+    background-image: url('/public/coming-soon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
