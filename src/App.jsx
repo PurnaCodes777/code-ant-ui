@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <div className="app flex min-h-screen custom-range:flex-col">
-      <div className="left w-[250px] custom-range:w-full min-h-full px-2 py-4 border shadow-sm bg-white transition-all relative">
+      <div className="left w-[250px] custom-range:w-full min-h-full px-0 py-4 border shadow-sm bg-white transition-all relative">
         <Sidebar />
       </div>
       <div className="right m-5 border rounded-lg shadow-sm w-full bg-white custom-range:ml-0 ">
