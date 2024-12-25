@@ -9,7 +9,7 @@ const AddRepoForm = () => {
 
     return (
         <div className="w-[500px] h-[450px] p-6 px-7 bg-slate-100 z-[100] 
-        absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-md border rounded-md">
+        absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-md border rounded-md custom-range:w-[383px] custom-range:absolute custom-range:mx-auto">
             <div className="flex items-center justify-between">
                 <h1 className="text-xl font-bold">✨ Add a Repository</h1>
                 <IoClose onClick={() => setShowRepo((prev) => !prev)} className="text-xl hover:text-red-500 cursor-pointer" />
@@ -50,11 +50,11 @@ const AddRepoForm = () => {
                         <div className="flex basis-1/2 gap-3 mb-6">
                             <div className="flex flex-col gap-2 ">
                                 <p>File Size</p>
-                                <input className="p-2 rounded-md text-sm border-0 outline-none focus:outline-[#1570EF]" type="text" placeholder="Format: 1024 KB" />
+                                <input className="p-2 rounded-md text-sm border-0 outline-none focus:outline-[#1570EF] custom-range:w-[150px]" type="text" placeholder="Format: 1024 KB" />
                             </div>
                             <div className="flex flex-col gap-2 ">
                                 <p>Updated</p>
-                                <input className="p-2 rounded-md text-sm border-0 outline-none focus:outline-[#1570EF]" type="text" placeholder="2 days" />
+                                <input className="p-2 rounded-md text-sm border-0 outline-none focus:outline-[#1570EF] custom-range:w-[160px]" type="text" placeholder="2 days" />
                             </div>
                         </div>
                     </div>
