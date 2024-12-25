@@ -18,12 +18,12 @@ const Sidebar = () => {
 
     return (
         <>
-            <div className="flex mb-4 custom-range:items-center justify-between p-2">
+            <div className="flex mb-4 custom-range:items-center justify-between py-4 px-5">
                 <img className="w-34 h-7" src="/code-ant-logo.png" alt="logo" />
-                <div className="md:hidden" onClick={() => { setShowMenu(!showMenu) }}> {showMenu ? <IoCloseSharp /> : <RxHamburgerMenu />}</div>
+                <div className="md:hidden" onClick={() => { setShowMenu(!showMenu) }}> {showMenu ? <IoCloseSharp fontSize={'20px'} /> : <RxHamburgerMenu fontSize={'20px'} />}</div>
             </div>
 
-            <div className="custom-range:w-full px-3 pb-4 absolute bg-white ">
+            <div className="custom-range:w-full px-3 pb-4 absolute bg-white z-50">
 
                 <div className={` ${showMenu ? "" : "hidden "}`}>
                     <select className="py-2 pr-1 border rounded-lg text-[12px] custom-range:w-full " name="name">
@@ -31,7 +31,7 @@ const Sidebar = () => {
                         <option value="PurnaChandra">PurnaChandra</option>
                     </select>
                 </div>
-                <div className={`flex flex-col z-10 relative h-full mt-4  ${showMenu ? "" : "custom-range:hidden"}`}>
+                <div className={`flex flex-col z-10 relative h-full mt-4  ${showMenu ? "custom-range:shadow-md" : "custom-range:hidden"}`}>
                     <SidebarMenu icon={<HiOutlineHome size={18} />} text='Repositories' menu={menu} setMenu={setMenu} />
                     <SidebarMenu icon={<FaCode size={18} />} text='AI Code Review' menu={menu} setMenu={setMenu} />
                     <SidebarMenu icon={<IoIosCloudOutline size={18} />} text='Cloud Security' menu={menu} setMenu={setMenu} />
