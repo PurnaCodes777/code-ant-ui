@@ -1,4 +1,5 @@
 import { createContext, useState } from "react"
+import projectsData from "../mockData";
 
 export const RepoContext = createContext();
 
@@ -6,11 +7,33 @@ export const RepoContext = createContext();
 
 const AddRepoContext = ({ children }) => {
 
+
+    const [fakeRepoData, setFakeRepoData] = useState(projectsData);
+
     const [showRepo, setShowRepo] = useState(false);
+    const [formRepoData, setFormRepoData] = useState({
+
+        name: '',
+        visibility: '',
+        size: '',
+        updated: '',
+        language: 'JavaScript'
+
+    });
+
+
+
+
+
 
     const values = {
         showRepo,
-        setShowRepo
+        setShowRepo,
+        formRepoData,
+        setFormRepoData,
+        fakeRepoData,
+        setFakeRepoData
+
     }
 
     return (
