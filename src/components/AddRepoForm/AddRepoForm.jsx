@@ -27,7 +27,7 @@ const AddRepoForm = () => {
         event.preventDefault(); // Prevent page reload
         formRef.current.reset();
         console.log(formRepoData);
-        setFakeRepoData((prev) => [...prev, formRepoData])
+        setFakeRepoData((prev) => [formRepoData, ...prev])
 
 
 
