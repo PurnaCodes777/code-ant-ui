@@ -1,17 +1,22 @@
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import RepoCard from "../RepoCard/RepoCard"
 import projectsData from "../../mockData"
+import { RepoContext } from "../../AddRepoContext/AddRepoContext";
 
 
 const Main = () => {
 
-    const [repoData, setRepoData] = useState(projectsData);
+    // const [repoData, setRepoData] = useState(projectsData);
+    const { formRepoData, fakeRepoData, setFakeRepoData } = useContext(RepoContext);
+
+
+
 
 
     return (
         <>
             <div className="repo-list h-[500px] overflow-y-scroll ">
-                {repoData.map((item, index) => {
+                {fakeRepoData.map((item, index) => {
                     return (
                         <RepoCard
                             key={index}
@@ -21,6 +26,7 @@ const Main = () => {
                             size={item.size}
                             updated={item.updated}
                         />
+
                     )
                 })}
             </div>
