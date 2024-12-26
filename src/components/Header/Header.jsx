@@ -6,14 +6,14 @@ import { RepoContext } from "../../AddRepoContext/AddRepoContext"
 
 const Header = () => {
 
-    const { showRepo, setShowRepo } = useContext(RepoContext)
+    const { showRepo, setShowRepo, fakeRepoData } = useContext(RepoContext)
 
     return (
         <>
             <div className="flex items-center justify-between mb-3 py-4 px-5 custom-range:flex-col custom-range:items-start gap-2">
                 <div className="flex flex-col gap-1">
                     <h1 className="text-2xl font-semibold">Repositories</h1>
-                    <p className="text-[12px] text-[#414651]">33 total repositories</p>
+                    <p className="text-[12px] text-[#414651]">{fakeRepoData.length} total repositories</p>
                 </div>
 
                 <div className="flex items-center gap-2">

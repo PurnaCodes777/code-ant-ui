@@ -7,7 +7,7 @@ export const RepoContext = createContext();
 
 const AddRepoContext = ({ children }) => {
 
-
+    // Main state which renders repo data
     const [fakeRepoData, setFakeRepoData] = useState(projectsData);
 
     const [showRepo, setShowRepo] = useState(false);
